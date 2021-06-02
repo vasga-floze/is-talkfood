@@ -35,6 +35,7 @@
         <!-- Page Content -->
         <main class="container my-5">
             {{ $slot }}
+           
         </main>
 
         @stack('modals')
