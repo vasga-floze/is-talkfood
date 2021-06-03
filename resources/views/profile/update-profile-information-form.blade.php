@@ -63,6 +63,42 @@
                 <x-jet-input-error for="name" />
             </div>
 
+            <div class="form-group">
+                <x-jet-label for="disname" value="{{ __('Display Name') }}" />
+                <x-jet-input id="disname" type="text" />
+                <x-jet-input-error for="disname" />
+            </div>
+
+            <div class="form-group">
+                <x-jet-label for="name" value="{{ __('Location') }}" />
+                <div class="form-group text-center">
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Choose Country</option>
+                            <option>El Salvador</option>
+                            <option>Mexico</option>
+                            <option>Italia</option>
+                            <option>Francia</option>
+                            <option>Argentina</option>
+                        </select>
+                </div>
+
+                <div class="form-group text-center">
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>State o Province</option>
+                            <option>Usulutan</option>
+                            <option>San Miguel</option>
+                            <option>La Libertad</option>
+                            <option>Santa Ana</option>
+                        </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <x-jet-label for="about" value="{{ __('About Me') }}" />
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <x-jet-input-error for="about" />
+            </div>
+
             <!-- Email -->
             <div class="form-group">
                 <x-jet-label for="email" value="{{ __('Email') }}" />

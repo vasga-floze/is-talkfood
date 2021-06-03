@@ -18,6 +18,11 @@
                     <div class="card" style="width: 36rem; height: 150px;">
                         <div class="card-body">
                             <h5 class="card-title">ABOUT ME</h5>
+                                <div>
+                                    <a href="{{ route('profile.show') }}">
+                                        <button type="submit" class="btn btn-dark">Edit Profile</button>
+                                    </a>
+                                </div>
                         </div>
                     </div>
                 </div>
