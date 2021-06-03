@@ -12,7 +12,6 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
                 <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                    {{ __('Dashboard') }}
                     <form class="form-inline my-3 my-lg-0">
                     <input class="form-control mr-sm-7" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-7 my-sm-0" type="submit">Search</button>
