@@ -5,7 +5,7 @@
             <div class="card-body px-5 py-3 border-bottom rounded-top">
                 <div class="mx-3 my-3">
                 <div class="card-group">
-                <div class="card shadow bg-light mr-2">
+                <div class="card bg-light mr-5">
                     <img src="{{ asset('images/logoTalkfood.png') }}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Recipe Name</h5>
@@ -15,7 +15,7 @@
                         <small class="text-muted">Last updated 3 mins ago</small>
                     </div>
                 </div>
-                <div class="card shadow bg-light">
+                <div class="card bg-light ml-0">
                     <img src="{{ asset('images/logoTalkfood.png') }}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Recipe Name</h5>
@@ -37,7 +37,7 @@
             <div class="card-body bg-transparent px-5 py-3 border-bottom rounded-top">
                 <div class="mx-3 my-3">
                 <div class="card-group">
-                <div class="card shadow bg-light mr-2">
+                <div class="card bg-light mr-5">
                     <img src="{{ asset('images/logoTalkfood.png') }}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Recipe Name</h5>
@@ -47,7 +47,7 @@
                         <small class="text-muted">Last updated 3 mins ago</small>
                     </div>
                 </div>
-                <div class="card shadow bg-light">
+                <div class="card bg-light ml-0">
                     <img src="{{ asset('images/logoTalkfood.png') }}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Recipe Name</h5>

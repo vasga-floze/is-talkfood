@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom sticky-top">
     <div class="container">
         <!-- Logo -->
-        <a class="navbar-brand mr-4" href="/">
+        <a class="navbar-brand mr-4" href="/dashboard">
             <x-jet-application-mark width="36" />
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -11,13 +11,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-                <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                <x-jet-nav-link class="mr-5" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                     {{ __('Dashboard') }}
-                    <form class="form-inline my-3 my-lg-0">
-                    <input class="form-control mr-sm-7" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-7 my-sm-0" type="submit">Search</button>
-    </form>
                 </x-jet-nav-link>
+                <form class="form-inline my-3 my-lg-0 ml-5">
+                    <input class="form-control ml-5 mr-2" type="search" placeholder="¿Qué se te apetece?" aria-label="Search">
+                    <button class="btn btn-outline-dark my-7 my-sm-0" type="submit">Search</button>
+                </form>
             </ul>
 
             <!-- Right Side Of Navbar -->

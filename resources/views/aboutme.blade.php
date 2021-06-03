@@ -9,37 +9,29 @@
         </form>
     </x-slot>
 </x-app-layout>
-<h2 class="text-center">ABOUT ME</h2>
+<h2 class="text-center">Biografía</h2>
 <div class="card">
     <div class="card-body px-5 py-3 border-bottom rounded-top">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
-                    <div class="card" style="width: 36rem; height: 150px;">
-                        <div class="card-body">
-                            <h5 class="card-title">ABOUT ME</h5>
-                        </div>
+                <div class="col-6">
+                    <div class="row">
+                        <h2 class="text-center">About Me</h2>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, voluptatum?
+                    </div>
+                    <div class="row">
+                        <h2 class="text-center">My Location</h2>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, aperiam?
                     </div>
                 </div>
-                <div class="col-sm-6">
-                    <div class="card" style="width: 10rem; height: 150px;">
-                        <img src="{{asset('images/profile.png')}}" width="150" height="125">
-                    </div>
+                <div class="col-6">
+                    <img src="{{asset('images/profile.png')}}" class="img-fluid">
+                    <h2 class="text-center">Mi Nombre</h2>
                 </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="card" style="width: 36rem; height: 150px;">
-                        <div class="col align-self-center">
-                            <h5 class="card-title">MY LOCATION</h5>
-                        </div>
-                    <div>
-                </div> 
             </div>
         </div>
     </div>
 </div>
+
+
 
