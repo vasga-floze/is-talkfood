@@ -27,6 +27,11 @@
                 <div class="col-6">
                     <img src="{{asset('images/profile.png')}}" class="img-fluid">
                     <h2 class="text-center">Mi Nombre</h2>
+                    <div class="text-center">
+                        <a href="{{ route('profile.show') }}">
+                            <button type="submit" class="btn btn-dark">Edit Profile</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
