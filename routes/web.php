@@ -32,3 +32,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/favorites', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/recipebook', function () {
     return view('recipebook');
 })->name('recipebook');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/form', function () {
+    return view('form');
+})->name('form');
