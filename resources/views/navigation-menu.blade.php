@@ -13,11 +13,11 @@
             <ul class="navbar-nav mr-auto">
 
                 <x-jet-nav-link class="mr-5" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                    {{ __('Dashboard') }}
+                    {{ __('INICIO') }}
                 </x-jet-nav-link>
                 <form class="form-inline my-3 my-lg-0 ml-5">
                     <input class="form-control ml-5 mr-2" type="search" placeholder="¿Qué se te apetece?" aria-label="Search">
-                    <button class="btn btn-outline-dark my-7 my-sm-0" type="submit">Search</button>
+                    <button class="btn btn-outline-dark my-7 my-sm-0" type="submit">Buscar</button>
                 </form>
             </ul>
 
@@ -38,17 +38,17 @@
                         <x-slot name="content">
                             <!-- Team Management -->
                             <h6 class="dropdown-header">
-                                {{ __('Manage Team') }}
+                                {{ __('Administrar equipo') }}
                             </h6>
 
                             <!-- Team Settings -->
                             <x-jet-dropdown-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}">
-                                {{ __('Team Settings') }}
+                                {{ __('Configuración del equipo') }}
                             </x-jet-dropdown-link>
 
                             @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
                                 <x-jet-dropdown-link href="{{ route('teams.create') }}">
-                                    {{ __('Create New Team') }}
+                                    {{ __('Crear nuevo equipo') }}
                                 </x-jet-dropdown-link>
                             @endcan
 
@@ -56,7 +56,7 @@
 
                             <!-- Team Switcher -->
                             <h6 class="dropdown-header">
-                                {{ __('Switch Teams') }}
+                                {{ __('Cambiar de equipo') }}
                             </h6>
 
                             @foreach (Auth::user()->allTeams() as $team)
@@ -84,11 +84,11 @@
                         <x-slot name="content">
                             <!-- Account Management -->
                             <h6 class="dropdown-header small text-muted">
-                                {{ __('Manage Account') }}
+                                {{ __('Administrar Cuenta') }}
                             </h6>
 
                             <x-jet-dropdown-link href="{{ route('profile.show') }}">
-                                {{ __('Profile') }}
+                                {{ __('Perfil') }}
                             </x-jet-dropdown-link>
 
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
@@ -103,7 +103,7 @@
                             <x-jet-dropdown-link href="{{ route('logout') }}"
                                                  onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
-                                {{ __('Log out') }}
+                                {{ __('Salir') }}
                             </x-jet-dropdown-link>
                             <form method="POST" id="logout-form" action="{{ route('logout') }}">
                                 @csrf

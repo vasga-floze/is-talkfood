@@ -1,11 +1,11 @@
 <x-app-layout>
     <x-slot name="header">
         <form class="form-inline my-4 my-lg-0">
-            <a class="nav-link mx-auto" href="{{ url('/aboutme') }}"><span>About Me</span></a>
+            <a class="nav-link mx-auto" href="{{ url('/aboutme') }}"><span>Acerca De</span></a>
 
-            <a class="nav-link mx-auto" href="{{ url('/favorites') }}"><span>Favorites</span></a>
+            <a class="nav-link mx-auto" href="{{ url('/favorites') }}"><span>Favoritos</span></a>
 
-            <a class="nav-link mx-auto" href="{{ url('/recipebook') }}"><span>Recipe Book</span></a>
+            <a class="nav-link mx-auto" href="{{ url('/recipebook') }}"><span>Recetario</span></a>
         </form>
     </x-slot>
 

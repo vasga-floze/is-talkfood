@@ -1,16 +1,16 @@
 <x-jet-form-section submit="updateProfileInformation">
     <x-slot name="title">
-        {{ __('Profile Information') }}
+        {{ __('Información del Perfil') }}
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Update your account\'s profile information and email address.') }}
+        {{ __('Actualice la información de perfil.') }}
     </x-slot>
 
     <x-slot name="form">
 
         <x-jet-action-message on="saved">
-            {{ __('Saved.') }}
+            {{ __('Guardar.') }}
         </x-jet-action-message>
 
         <!-- Profile Photo -->
@@ -42,12 +42,12 @@
                 </div>
 
                 <x-jet-secondary-button class="mt-2 mr-2" type="button" x-on:click.prevent="$refs.photo.click()">
-                    {{ __('Select A New Photo') }}
+                    {{ __('Seleccione una nueva foto') }}
 				</x-jet-secondary-button>
 				
 				@if ($this->user->profile_photo_path)
                     <x-jet-secondary-button type="button" class="mt-2" wire:click="deleteProfilePhoto">
-                        {{ __('Remove Photo') }}
+                        {{ __('Eliminar foto') }}
                     </x-jet-secondary-button>
                 @endif
 
@@ -58,14 +58,51 @@
         <div class="w-md-75">
             <!-- Name -->
             <div class="form-group">
-                <x-jet-label for="name" value="{{ __('Name') }}" />
+                <x-jet-label for="name" value="{{ __('Nombre') }}" />
                 <x-jet-input id="name" type="text" class="{{ $errors->has('name') ? 'is-invalid' : '' }}" wire:model.defer="state.name" autocomplete="name" />
                 <x-jet-input-error for="name" />
             </div>
 
+            <div class="form-group">
+                <x-jet-label for="disname" value="{{ __('Nombre para mostrar') }}" />
+                <x-jet-input id="disname" type="text" />
+                <x-jet-input-error for="disname" />
+            </div>
+
+            <div class="form-group">
+                <x-jet-label for="name" value="{{ __('Ubicación') }}" />
+                <div class="form-group text-center">
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Elige tu país</option>
+                            <option>El Salvador</option>
+                            <option>Mexico</option>
+                            <option>Italia</option>
+                            <option>Francia</option>
+                            <option>Argentina</option>
+                        </select>
+                </div>
+
+                <div class="form-group text-center">
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Estado o Provincia</option>
+                            <option>Usulutan</option>
+                            <option>San Miguel</option>
+                            <option>La Libertad</option>
+                            <option>Santa Ana</option>
+                        </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <x-jet-label for="about" value="{{ __('Acerca de') }}" />
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <x-jet-input-error for="about" />
+            </div>
+
+
             <!-- Email -->
             <div class="form-group">
-                <x-jet-label for="email" value="{{ __('Email') }}" />
+                <x-jet-label for="email" value="{{ __('Dirección de correo electrónico') }}" />
                 <x-jet-input id="email" type="email" class="{{ $errors->has('email') ? 'is-invalid' : '' }}" wire:model.defer="state.email" />
                 <x-jet-input-error for="email" />
             </div>
@@ -75,7 +112,7 @@
     <x-slot name="actions">
 		<div class="d-flex align-items-baseline">
 			<x-jet-button>
-				{{ __('Save') }}
+				{{ __('Guardar') }}
 			</x-jet-button>
 		</div>
     </x-slot>

@@ -1,11 +1,11 @@
 <x-app-layout>
     <x-slot name="header">
         <form class="form-inline my-4 my-lg-0">
-            <a class="nav-link mx-auto" href="{{ url('/aboutme') }}"><span>About Me</span></a>
+            <a class="nav-link mx-auto" href="{{ url('/aboutme') }}"><span>Acerca De</span></a>
 
-            <a class="nav-link mx-auto" href="{{ url('/favorites') }}"><span>Favorites</span></a>
+            <a class="nav-link mx-auto" href="{{ url('/favorites') }}"><span>Favoritos</span></a>
 
-            <a class="nav-link mx-auto" href="{{ url('/recipebook') }}"><span>Recipe Book</span></a>
+            <a class="nav-link mx-auto" href="{{ url('/recipebook') }}"><span>Recetario</span></a>
         </form>
     </x-slot>
 </x-app-layout>
@@ -23,7 +23,7 @@
                 <div class="card shadow">
                     <img src="{{ asset('images/food.png') }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Recipe Name</h5>
+                        <h5 class="card-title">Nombre de la receta</h5>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
                     </div>
                     <div class="card-footer">
