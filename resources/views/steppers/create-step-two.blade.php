@@ -26,7 +26,7 @@
 
                             <div class="form-group text-center">
                                 <label for="receta">Agregar paso de la receta</label>
-                                <input  class="form-control" id="receta">
+                                <input  class="form-control" id="receta" required>
                             </div>
   
   
@@ -35,7 +35,7 @@
                             <center>
                                 <div class="col-5 mb-3">
                                     <label for="tiempo">Tiempo de la receta</label>
-                                    <input  class="form-control" id="tiempo">
+                                    <input  class="form-control" id="tiempo" placeholder="30min" required> 
                                 </div>
                             </center>
 
@@ -44,10 +44,10 @@
                     <div class="card-footer">
                         <div class="row">
                             <div class="col-md-6 text-left">
-                                <a href="{{ route('steppers.create.step.one') }}" class="btn btn-dark pull-right">Anterior</a>
+                                <button href="{{ route('steppers.create.step.one') }}" class="btn btn-dark pull-right">Anterior</button>
                             </div>
                             <div class="col-md-6 text-right">
-                                <a href="{{ route('steppers.create.step.three') }}" class="btn btn-dark pull-right">Siguiente</a>
+                                <button href="{{ route('steppers.create.step.three') }}" class="btn btn-dark pull-right">Siguiente</button>
                             </div>
                         </div>
                     </div>
