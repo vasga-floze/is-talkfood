@@ -40,7 +40,7 @@
                 <div class="mb-0">
                     <div class="d-flex justify-content-end">
                         <x-jet-button>
-                            {{ __('Reset Password') }}
+                            {{ __('Restablecer contraseña') }}
                         </x-jet-button>
                     </div>
                 </div>
