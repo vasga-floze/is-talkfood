@@ -7,7 +7,7 @@
         <div class="card-body">
 
             <div class="mb-3">
-                {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
+                {{ __('¿Ha olvidado su contraseña? No hay problema. Sólo tienes que indicarnos tu dirección de correo electrónico y te enviaremos un enlace para restablecer la contraseña que te permitirá elegir una nueva.') }}
             </div>
 
             @if (session('status'))
@@ -28,7 +28,7 @@
 
                 <div class="d-flex justify-content-end mt-4">
                     <x-jet-button>
-                        {{ __('Email Password Reset Link') }}
+                        {{ __('Enlace para restablecer la contraseña') }}
                     </x-jet-button>
                 </div>
             </form>

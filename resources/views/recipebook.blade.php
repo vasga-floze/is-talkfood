@@ -18,7 +18,7 @@
         <div class="row row-cols-1 row-cols-md-3">
             <div class="col mx-auto my-auto">
                 <div class="card shadow">
-                    <a href="/form">
+                    <a href="/steppers">
                         <img src="{{ asset('images/Add_files.png') }}" class="card-img-top" alt="...">
                     </a>
                     <div class="card-body">
