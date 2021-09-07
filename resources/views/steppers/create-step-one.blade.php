@@ -24,11 +24,11 @@
 
                         <div class="form-group">
                             <label for="title">Nombre de la receta:</label>
-                            <input type="text" value="{{ $product->name ?? '' }}" class="form-control" id="taskTitle"  name="name">
+                            <input type="text" value="{{ $product->name ?? '' }}" class="form-control" id="taskTitle"  name="name" required>
                         </div>
                         <div class="form-group">
                             <label for="description">Descripción:</label>
-                            <input type="text"  value="{{{ $product->amount ?? '' }}}" class="form-control" id="productAmount" name="amount"/>
+                            <input type="text"  value="{{{ $product->amount ?? '' }}}" class="form-control" id="productAmount" name="amount"/ required>
                         </div>
 
                         <div class="form-group ">
