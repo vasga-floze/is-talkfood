@@ -41,7 +41,7 @@ Route::get('steppers', 'App\Http\Controllers\FormController@index')->name('stepp
 Route::get('steppers/create-step-one', 'App\Http\Controllers\FormController@createStepOne')->name('steppers.create.step.one');
 Route::post('steppers/create-step-one', 'App\Http\Controllers\FormController@postCreateStepOne')->name('steppers.create.step.one.post');
   
-Route::get('steppers/create-step-two', 'App\Http\Controllers\FormController@createStepTwo')->name('steppers.create.step.two');
+Route::get('steppers/create-step-two', 'App\Http\Controllers\HomeController@createStepTwo')->name('steppers.create.step.two');
 Route::post('steppers/create-step-two', 'App\Http\Controllers\HomeController@postCreateStepTwo')->name('steppers.create.step.two.post');
   
 Route::get('steppers/create-step-three', 'App\Http\Controllers\FormController@createStepThree')->name('steppers.create.step.three');
