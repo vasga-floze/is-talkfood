@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Recipe;
+
+
 use Illuminate\Http\Request;
+use App\Http\Resources\Recipes as RecipesResource;
+use App\Models\Recipe;
 
 class RecipeController extends Controller
 {
@@ -15,6 +18,11 @@ class RecipeController extends Controller
     public function index()
     {
         //
+        //GET
+        $recipes=Recipe::all();
+
+        //coleccion
+        return RecipesResource::collection($recipes);
     }
 
     /**
@@ -36,6 +44,23 @@ class RecipeController extends Controller
     public function store(Request $request)
     {
         //
+        //guardar y actualizar
+        $recipe = $request->isMethod('put') ? Recipe::findOrFail($request->id) : new Recipe;
+        $recipe->id = $request->input('id');
+        $recipe->nameRecipe = $request->input('nameRecipe');
+        $recipe->time = $request->input('time');
+        $recipe->description = $request->input('description');
+        $recipe->recipePhotography = $request->input('recipePhotography');
+        $recipe->levelRate = $request->input('levelRate');
+        $recipe->id_user = $request->input('id_user');
+        $recipe->id_album = $request->input('id_album');
+        $recipe->id_category = $request->input('id_category');
+        $recipe->id_privacy = $request->input('id_privacy');
+        $recipe->id_stepsRecipe = $request->input('id_stepsRecipe');
+
+        if($recipe->save()){
+            return new RecipesResource($recipe);
+        }
     }
 
     /**
@@ -44,9 +69,13 @@ class RecipeController extends Controller
      * @param  \App\Models\Recipe  $recipe
      * @return \Illuminate\Http\Response
      */
-    public function show(Recipe $recipe)
+    public function show($id)
     {
-        //
+        //obtener por id
+        $recipe = Recipe::findOrFail($id);
+
+        //retornar datos
+        return new RecipesResource($recipe);
     }
 
     /**
@@ -78,8 +107,13 @@ class RecipeController extends Controller
      * @param  \App\Models\Recipe  $recipe
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Recipe $recipe)
+    public function destroy( $id)
     {
-        //
+         //eliminar
+         $recipe=Recipe::findorFail($id);
+
+         if($recipe->delete()){
+             return new RecipesResource($recipe);
+         }
     }
 }
