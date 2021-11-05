@@ -14,7 +14,7 @@ class CreateProfileUsersTable extends Migration
     public function up()
     {
         Schema::create('profile_users', function (Blueprint $table) {
-            $table->bigIncrements('id_profile'); //Tipo de columna equivalente a auto-incremento UNSIGNED BIGINT (clave primaria).
+            $table->id(); //Tipo de columna equivalente a auto-incremento UNSIGNED BIGINT (clave primaria).
             $table->string('firstName', 20);
             $table->string('lastName', 20);
             $table->date('birthDate');
@@ -29,7 +29,7 @@ class CreateProfileUsersTable extends Migration
                 ->references('id') ->on('users') ->onDelete('cascade');
             $table->unsignedBigInteger('id_country');
             $table->foreign('id_country')
-                ->references('id_country') ->on('countries') ->onDelete('cascade');
+                ->references('id') ->on('countries') ->onDelete('cascade');
             $table->timestamps();
         });
     }

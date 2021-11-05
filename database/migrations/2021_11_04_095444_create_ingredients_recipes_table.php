@@ -14,13 +14,13 @@ class CreateIngredientsRecipesTable extends Migration
     public function up()
     {
         Schema::create('ingredients_recipes', function (Blueprint $table) {
-            $table->id('id_ingredientsRecipe');
+            $table->id();
             $table->string('ingredientName', 25);
             $table->string('presentation', 30)->nullable();
             $table->string('quantity', 30);
             $table->unsignedBigInteger('id_recipe');
             $table->foreign('id_recipe')
-                ->references('id_recipe')
+                ->references('id')
                 ->on('recipes')
                 ->onDelete('cascade');
             $table->timestamps();

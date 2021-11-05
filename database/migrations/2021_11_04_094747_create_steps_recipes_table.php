@@ -14,7 +14,7 @@ class CreateStepsRecipesTable extends Migration
     public function up()
     {
         Schema::create('steps_recipes', function (Blueprint $table) {
-            $table->id('id_stepsRecipe');
+            $table->id();
             $table->string('stepsName', 50);
             $table->string('description', 250);
             $table->string('stepsPhotography', 150)->nullable();

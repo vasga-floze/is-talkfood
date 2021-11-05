@@ -14,7 +14,7 @@ class CreateRecipesTable extends Migration
     public function up()
     {
         Schema::create('recipes', function (Blueprint $table) {
-            $table->id('id_recipe');
+            $table->id();
             $table->string('nameRecipe', 50);
             $table->string('time', 30)->nullable();
             $table->string('description', 250);
@@ -27,22 +27,22 @@ class CreateRecipesTable extends Migration
                 ->onDelete('cascade');
             $table->unsignedBigInteger('id_album');
             $table->foreign('id_album')
-                ->references('id_album')
+                ->references('id')
                 ->on('albums')
                 ->onDelete('cascade');
             $table->unsignedBigInteger('id_category');
             $table->foreign('id_category')
-                ->references('id_category')
+                ->references('id')
                 ->on('categories')
                 ->onDelete('cascade');
             $table->unsignedBigInteger('id_privacy');
             $table->foreign('id_privacy')
-                ->references('id_privacy')
+                ->references('id')
                 ->on('privacies')
                 ->onDelete('cascade');
             $table->unsignedBigInteger('id_stepsRecipe');
             $table->foreign('id_stepsRecipe')
-                ->references('id_stepsRecipe')
+                ->references('id')
                 ->on('steps_recipes')
                 ->onDelete('cascade');
             $table->timestamps();
