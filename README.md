@@ -1,3 +1,13 @@
+### RAMA QUE CONTIENE TODOS LOS CAMBIOS (17 noviembre 2021): 
+- #### recipeSteps
+
+## ¿De qué trata TalkFood?
+
+- TalkFood es una red social (en desarrollo) para chefs y amantes de la cocina que deseen adquirir y/o compartir conocimientos en las artes culinarias, posteando sus recetas o viendo las recetas compartidas por otros usuarios; donde todos podrán compartir fotos y pasos de lo que hacen para preparar una receta. 
+- También podrán a través de comentarios realizar sugerencias, además dejar sus valoraciones a la persona que compartió su receta. 
+- Permitirá la adquisición de nuevas recetas e incluso un intercambio cultural culinario entre los diversos manjares de muchos países. 
+- La misión es permitir que todos encuentren inspiración para cocinar en casa a través de las diferentes recetas que todos los usuarios van a compartir. 
+
 ## EJECUTAR ESTA APLICACION POR PRIMERA VEZ
 - Crear una base de datos en el gestor mysql.
 - Duplicar el archivo *.env.example* y renombrarlo a *.env*  <-- en este agregar el nombre de la base de datos y contraseña.
@@ -6,9 +16,6 @@
 - Ejecutar las migraciones con el comando: ``` php artisan migrate:refresh --seed```
 - Ahora solo resta levantar el servidor de artisan con el comando: ```php artisan serve```
 - Generar la clave de cifrado de la aplicación al ejecutar aplicación.
-
-### RAMA QUE CONTIENE TODOS LOS CAMBIOS: develop
-
 
 
 
