@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http; //add the class
 
 class HomeController extends Controller
 {
@@ -23,7 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $users = HTTP::get('https://jsonplaceholder.typicode.com/users');
+        $usersArray = $users -> json();
+        return view('home', compact('usersArray'));
     }
 
     public function form()
