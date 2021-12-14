@@ -147,6 +147,12 @@
                         <div class="col-md-12 text-center">
                             <a href="{{ route('register') }}" class="btn btn-success" role="button">Crear Nueva Cuenta</a>
                         </div>
+
+                        <div class="col-md-12 text-center">
+                             <a class="btn btn-link" href="https://vasga-floze.github.io/users-guide/">
+                             {{ __('¿Necesitas ayuda?') }}
+                             </a>
+                        </div>
                     </div>
                 </div>
             </div>
