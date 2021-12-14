@@ -10,18 +10,12 @@
         
                         <div class="card-body text-center">
                             <div class="form-group text-center">
-                                            <label for="exampleFormControlSelect1">Dificultad</label>
-                                            <select class="form-control" id="exampleFormControlSelect1">
-                                                <option>Seleccionar dificultad</option>
-                                                <option>Alto</option>
-                                                <option>Medio</option>
-                                                <option>Bajo</option>
-                                            </select>
+                                            
                                         </div>
 
                                         <div class="custom-file mb-3">
                                             <input type="file" class="custom-file-input" id="customFileLang" lang="es">
-                                            <label class="custom-file-label" for="customFileLang">Seleccionar Imagen de su Ingrediente</label>
+                                            <label class="custom-file-label" for="customFileLang">Seleccionar fotografía de resultado final</label>
                                         </div>
 
                                         <div class="form-group">
@@ -43,7 +37,7 @@
                 </div>
             </form>
             <div class="text-center mt-3">
-                <a href="/dashboard" class="btn btn-dark pull-right">Finalizar</a>
+                <a href="/dashboard" class="btn btn-dark pull-right">Publicar Receta</a>
             </div>
         </div>
     </div>
